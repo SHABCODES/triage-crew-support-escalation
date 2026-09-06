@@ -1,0 +1,258 @@
+[
+  {
+    "id": "TICK-1001",
+    "subject": "Issue regarding Billing - I was charged twice fo...",
+    "body": "I was charged twice for my subscription this month.",
+    "customer_id": "CUST-412",
+    "expected_category": "Billing",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1002",
+    "subject": "Issue regarding Technical - The API returns a 500 ...",
+    "body": "The API returns a 500 error when I try to POST to /users.",
+    "customer_id": "CUST-833",
+    "expected_category": "Technical",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1003",
+    "subject": "Issue regarding Account - I want to change the ema...",
+    "body": "I want to change the email address associated with my account.",
+    "customer_id": "CUST-721",
+    "expected_category": "Account",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1004",
+    "subject": "Issue regarding General - What are your support ho...",
+    "body": "What are your support hours?",
+    "customer_id": "CUST-522",
+    "expected_category": "General",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1005",
+    "subject": "Issue regarding Billing - Can I get a refund for t...",
+    "body": "Can I get a refund for the last invoice? I canceled my account before the billing date.",
+    "customer_id": "CUST-390",
+    "expected_category": "Billing",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1006",
+    "subject": "Issue regarding Technical - I can't log in to the ...",
+    "body": "I can't log in to the dashboard, it just shows a blank white screen.",
+    "customer_id": "CUST-199",
+    "expected_category": "Technical",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1007",
+    "subject": "Issue regarding Account - Please delete my account...",
+    "body": "Please delete my account and all associated data under GDPR.",
+    "customer_id": "CUST-662",
+    "expected_category": "Account",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1008",
+    "subject": "Issue regarding General - Do you offer discounts f...",
+    "body": "Do you offer discounts for non-profits?",
+    "customer_id": "CUST-104",
+    "expected_category": "General",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1009",
+    "subject": "Issue regarding Billing - The invoice #{} doesn't ...",
+    "body": "The invoice #{} doesn't have my company's VAT number on it.",
+    "customer_id": "CUST-311",
+    "expected_category": "Billing",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1010",
+    "subject": "Issue regarding Technical - The mobile app crashes...",
+    "body": "The mobile app crashes on startup on my iPhone 15.",
+    "customer_id": "CUST-881",
+    "expected_category": "Technical",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1011",
+    "subject": "Issue regarding Account - How do I add another adm...",
+    "body": "How do I add another admin to my workspace?",
+    "customer_id": "CUST-155",
+    "expected_category": "Account",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1012",
+    "subject": "Issue regarding General - I have a feature request...",
+    "body": "I have a feature request: can you add dark mode?",
+    "customer_id": "CUST-944",
+    "expected_category": "General",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1013",
+    "subject": "Issue regarding Billing - My credit card keeps get...",
+    "body": "My credit card keeps getting declined but it has sufficient funds.",
+    "customer_id": "CUST-213",
+    "expected_category": "Billing",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1014",
+    "subject": "Issue regarding Technical - Webhooks are delayed b...",
+    "body": "Webhooks are delayed by about 20 minutes since yesterday.",
+    "customer_id": "CUST-587",
+    "expected_category": "Technical",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1015",
+    "subject": "Issue regarding Account - I forgot my password and...",
+    "body": "I forgot my password and the reset email is not arriving.",
+    "customer_id": "CUST-348",
+    "expected_category": "Account",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1016",
+    "subject": "Issue regarding General - Where can I find your te...",
+    "body": "Where can I find your terms of service?",
+    "customer_id": "CUST-755",
+    "expected_category": "General",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1017",
+    "subject": "Issue regarding Billing - I want to upgrade my pla...",
+    "body": "I want to upgrade my plan to annual, can you prorate the difference?",
+    "customer_id": "CUST-491",
+    "expected_category": "Billing",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1018",
+    "subject": "Issue regarding Technical - How do I reset my API ...",
+    "body": "How do I reset my API key?",
+    "customer_id": "CUST-210",
+    "expected_category": "Technical",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1019",
+    "subject": "Issue regarding Account - Can you merge my persona...",
+    "body": "Can you merge my personal and work accounts?",
+    "customer_id": "CUST-810",
+    "expected_category": "Account",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1020",
+    "subject": "Issue regarding General - Is your platform SOC2 co...",
+    "body": "Is your platform SOC2 compliant?",
+    "customer_id": "CUST-630",
+    "expected_category": "General",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1021",
+    "subject": "Issue regarding Billing - Why is there a $10 fee o...",
+    "body": "Why is there a $10 fee on my statement?",
+    "customer_id": "CUST-522",
+    "expected_category": "Billing",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1022",
+    "subject": "Issue regarding Technical - The data export featur...",
+    "body": "The data export feature seems to be broken, the CSV is empty.",
+    "customer_id": "CUST-444",
+    "expected_category": "Technical",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1023",
+    "subject": "Issue regarding Account - I need to transfer owner...",
+    "body": "I need to transfer ownership of this account to my colleague.",
+    "customer_id": "CUST-779",
+    "expected_category": "Account",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1024",
+    "subject": "Issue regarding General - I'm writing a blog post ...",
+    "body": "I'm writing a blog post and would like to use your logo.",
+    "customer_id": "CUST-921",
+    "expected_category": "General",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1025",
+    "subject": "Issue regarding Billing - I need a copy of all my ...",
+    "body": "I need a copy of all my invoices for 2023.",
+    "customer_id": "CUST-130",
+    "expected_category": "Billing",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1026",
+    "subject": "Issue regarding Technical - Is there an outage rig...",
+    "body": "Is there an outage right now? The service is very slow.",
+    "customer_id": "CUST-802",
+    "expected_category": "Technical",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1027",
+    "subject": "Issue regarding Account - My account is locked due...",
+    "body": "My account is locked due to too many failed login attempts.",
+    "customer_id": "CUST-388",
+    "expected_category": "Account",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1028",
+    "subject": "Issue regarding General - Can I schedule a demo wi...",
+    "body": "Can I schedule a demo with your sales team?",
+    "customer_id": "CUST-611",
+    "expected_category": "General",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1029",
+    "subject": "Issue regarding Billing - Your billing system char...",
+    "body": "Your billing system charged me even after I requested a cancellation. Please refund.",
+    "customer_id": "CUST-414",
+    "expected_category": "Billing",
+    "expected_urgency": "High"
+  },
+  {
+    "id": "TICK-1030",
+    "subject": "Issue regarding Technical - I'm getting a CORS err...",
+    "body": "I'm getting a CORS error when integrating your SDK into my React app.",
+    "customer_id": "CUST-902",
+    "expected_category": "Technical",
+    "expected_urgency": "Medium"
+  },
+  {
+    "id": "TICK-1031",
+    "subject": "Issue regarding Account - How do I enable 2FA on m...",
+    "body": "How do I enable 2FA on my account?",
+    "customer_id": "CUST-218",
+    "expected_category": "Account",
+    "expected_urgency": "Low"
+  },
+  {
+    "id": "TICK-1032",
+    "subject": "Issue regarding General - Do you support languages...",
+    "body": "Do you support languages other than English?",
+    "customer_id": "CUST-355",
+    "expected_category": "General",
+    "expected_urgency": "Low"
+  }
+]

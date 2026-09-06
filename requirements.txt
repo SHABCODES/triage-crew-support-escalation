@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pydantic-settings
+crewai
+chromadb
+pytest
+litellm
+ddtrace
+datadog
+google-genai
