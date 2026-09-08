@@ -66,7 +66,7 @@ def main():
             print(f"Success! Dashboard created at: https://app.datadoghq.com/dashboard/{dash_response['id']}")
         else:
             print("Failed to create dashboard:", dash_response)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print("Error creating dashboard:", e)
 
     print("\nCreating Escalation Alert Monitor...")
@@ -99,7 +99,7 @@ def main():
             print(f"Success! Monitor created with ID: {monitor_response['id']}")
         else:
             print("Failed to create monitor:", monitor_response)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print("Error creating monitor:", e)
 
 if __name__ == "__main__":

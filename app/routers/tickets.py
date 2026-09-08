@@ -55,7 +55,7 @@ def create_ticket(ticket_data: TicketCreate, db: Session = Depends(get_db)):
         # Update ticket status
         ticket.status = "resolved" if resolution.decision == "auto_resolve" else "escalated"
         db.commit()
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         ticket.status = "escalated"
         db.commit()
         raise HTTPException(status_code=500, detail=str(e))

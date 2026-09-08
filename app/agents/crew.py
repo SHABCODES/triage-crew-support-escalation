@@ -86,7 +86,7 @@ def run_triage_crew(ticket_id: int, subject: str, body: str, db: Session) -> dic
             if "```json" in raw_str:
                 raw_str = raw_str.split("```json")[1].split("```")[0]
             final_result = json.loads(raw_str.strip())
-        except Exception:
+        except (json.JSONDecodeError, IndexError, ValueError):
             final_result = {}
     if isinstance(final_result, dict):
         decision = final_result.get("decision", "unknown")
