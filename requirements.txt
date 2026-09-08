@@ -3,6 +3,10 @@ uvicorn
 sqlalchemy
 pydantic
 pydantic-settings
-crewai
+crewai[google-genai]
 chromadb
 pytest
+litellm
+ddtrace
+datadog
+langsmith

@@ -7,6 +7,7 @@ from app.agents.triage_agent import create_triage_agent, create_triage_task
 from app.agents.retrieval_agent import create_retrieval_agent, create_retrieval_task
 from app.agents.resolution_agent import create_resolution_agent, create_resolution_task
 from app.agents.supervisor_agent import create_supervisor_agent_with_tool, create_supervisor_task
+from app.observability import emit_agent_step_metric, emit_final_decision_metric
 
 def run_triage_crew(ticket_id: int, subject: str, body: str, db: Session) -> dict:
     triage_agent = create_triage_agent()
@@ -45,6 +46,7 @@ def run_triage_crew(ticket_id: int, subject: str, body: str, db: Session) -> dic
             "agent_name": task_output.agent,
             "output": task_output.json_dict or task_output.raw
         })
+        emit_agent_step_metric(task_output.agent)
 
     triage_task = create_triage_task(triage_agent, subject, body)
     
@@ -74,8 +76,25 @@ def run_triage_crew(ticket_id: int, subject: str, body: str, db: Session) -> dic
     result = crew.kickoff()
     
     # After kickoff, the final output should be the supervisor's decision.
+    final_result = result.json_dict
+    
+    if not final_result and result.raw:
+        import re
+        raw_str = result.raw
+        try:
+            # Strip markdown json blocks if present
+            if "```json" in raw_str:
+                raw_str = raw_str.split("```json")[1].split("```")[0]
+            final_result = json.loads(raw_str.strip())
+        except Exception:
+            final_result = {}
+    if isinstance(final_result, dict):
+        decision = final_result.get("decision", "unknown")
+        matched_rule = final_result.get("matched_rule", "unknown")
+        emit_final_decision_metric(decision, matched_rule)
+
     # Return the trace and final result
     return {
-        "final_result": result.json_dict or result.raw,
+        "final_result": final_result,
         "trace": trace
     }

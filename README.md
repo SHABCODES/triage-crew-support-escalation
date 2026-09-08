@@ -44,6 +44,15 @@ graph TD
    ```
    This will automatically run the seed script to load synthetic tickets into SQLite and policy documents into ChromaDB, and start the FastAPI server on `localhost:8000`.
 
+## Observability & Operations
+
+The system is instrumented with:
+- **LangSmith Tracing:** For deep inspection of agent execution, tool calls, and LLM payloads.
+- **Datadog APM & StatsD:** For service-level performance monitoring and custom business metrics (e.g., ticket resolution outcomes vs escalations).
+- **Kubernetes:** A complete set of deployment manifests is available in `k8s/`.
+
+For a full guide on deploying this system, configuring the dashboards, and simulating an incident via Rootly, see the [RUNBOOK.md](./RUNBOOK.md).
+
 ## Worked Example
 
 **Input (POST /tickets):**
@@ -85,6 +94,7 @@ The system is covered by **25+ tests** spanning unit logic, guardrail rules, and
 
 ## Honest Limitations
 
+- **State Management:** The current implementation uses SQLite for both ticket tracking and agent step persistence. SQLite does not survive multi-replica Kubernetes deployments; a production deployment would require an external Postgres database.
 - **Confidence Scores:** The confidence scores from the Resolution Agent are LLM-self-reported heuristics, not calibrated statistical probabilities.
 - **Synthetic Data:** The provided support queries and policy documents are synthetic, and performance numbers should not be generalized to production without evaluation on real data.
 - **Synchronous Execution:** For MVP simplicity, the `POST /tickets` endpoint handles the entire agent loop synchronously. This means latency can be upwards of 15-20 seconds. 

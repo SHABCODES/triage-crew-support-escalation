@@ -35,3 +35,6 @@ chroma_db/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Kubernetes Secrets
+k8s/secret.yaml
