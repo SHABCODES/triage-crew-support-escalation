@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: triagecrew
-        image: triagecrew:local
+        image: triagecrew:v2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000
